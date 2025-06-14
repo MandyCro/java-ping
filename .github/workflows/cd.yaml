@@ -16,5 +16,5 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
        - name: Build and Push
          run:
-          docker build -t mandycro/java-ping .
-          docker push mandycro/java-ping
+          docker build -t ${{ vars.DOCKERHUB_USERNAME }}/java-ping .
+          docker push ${{ vars.DOCKERHUB_USERNAME }}/java-ping
